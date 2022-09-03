@@ -10,4 +10,4 @@ https://docs.ultimatemember.com/article/1516-templates-map
 
 You can enter your heading by editing line 346 ```<div> &nbsp; </div>```
 
-Don't remove this line 346 otherwise you must do JavaScript code changes to prevent the filter box from being displayed after last line if no search or filter used when using a Members Directory link.
+Don't remove this line 346 otherwise you must do JavaScript code changes to prevent the filter box from being displayed after last line if no search or filter used like when using a Members Directory link.
