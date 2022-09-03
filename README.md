@@ -8,6 +8,6 @@ Download from this repository and upload to your /ultimate-member/templates/ the
 
 https://docs.ultimatemember.com/article/1516-templates-map
 
-You can enter your heading by editing line 346 <div> &nbsp; </div>
+You can enter your heading by editing line 346 ```<div> &nbsp; </div>```
 
 Don't remove this line 346 otherwise you must do JavaScript code changes to prevent the filter box from being displayed after last line if no search or filter used.
