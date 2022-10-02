@@ -1,4 +1,9 @@
-<?php if ( ! defined( 'ABSPATH' ) ) exit;
+<?php 
+// Customized members.php 
+// Single column filters to the left
+// Version 1.1
+
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 global $post;
 
@@ -322,7 +327,7 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 
 								<div class="um-search-filter um-<?php echo esc_attr( $type ) ?>-filter-type <?php echo ( $i != 0 && $i%2 !== 0 ) ? 'um-search-filter-2' : '' ?>">
 									<?php echo $filter_content; ?>
-								</div>
+								</div><br />
 
 								<?php $i++;
 							} ?>
@@ -393,6 +398,3 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 	do_action( 'um_members_directory_footer', $args, $form_id, $not_searched ); ?>
 
 </div>
-
-	
-
