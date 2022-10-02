@@ -1,5 +1,5 @@
 # UM Members Directory Left Filter Box
-Member Directory Filter &amp; Search box moved from the top to the left side of the page.
+Member Directory Filter &amp; Search box moved from the top to the left side of the page with a single column with filters to the left.
 
 ## Installation ##
 Create a directory ```/ultimate-member/templates/``` in your active theme or child-theme 
