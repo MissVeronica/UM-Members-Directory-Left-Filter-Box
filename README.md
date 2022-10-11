@@ -10,4 +10,4 @@ https://docs.ultimatemember.com/article/1516-templates-map
 
 
 ## Updates ##
-Version 2.0  Date 2022-10-11
+Version 2.0  Date 2022-10-11 Now support for full screen pages
