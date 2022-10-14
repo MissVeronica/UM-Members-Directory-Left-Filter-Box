@@ -2,8 +2,8 @@
 
 // Customized members.php 
 // Single column filters to the left
-// Version 2.0
-// Date 2022-10-11
+// Version 2.1
+// Date 2022-10-14
 // https://github.com/MissVeronica/UM-Members-Directory-Left-Filter-Box
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -228,9 +228,9 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 
 	<div style="display:table;width:100%"> <!--  Table  -->
 
-		<div style="display:table-row;width:100%"> <!--  Row -->
+		<div style="display:table-row;width:100%;"> <!--  Row -->
 							
-			<div style="display:table-cell;width:10%;padding-right:10px;vertical-align:top"> <!--  Cell left -->
+			<div style="display:table-cell;width:15%;padding-right:10px;vertical-align:top;"> <!--  Cell left -->
 
 				<div class="um-form"> <!--  Header cell left -->
 
@@ -243,7 +243,9 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 									<span><?php _e( 'Search:', 'ultimate-member' ); ?></span>
 									<input type="search" class="um-search-line" placeholder="<?php esc_attr_e( 'Search', 'ultimate-member' ) ?>"  value="<?php echo esc_attr( $search_from_url ) ?>" aria-label="<?php esc_attr_e( 'Search', 'ultimate-member' ) ?>" speech />
 								</label>
-								<input type="button" class="um-do-search um-button" value="<?php esc_attr_e( 'Search', 'ultimate-member' ); ?>" />
+								<div style="padding-top:10px;">
+									<input type="button" class="um-do-search um-button" value="<?php esc_attr_e( 'Search', 'ultimate-member' ); ?>" />
+								</div>
 							</div>
 						</div>
 					<?php }
@@ -255,7 +257,8 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 							<div class="um-member-directory-nav-line">
 								<?php if ( ! $single_view ) {
 									$view_types = 0;
-
+									$display_status = '';
+									
 									foreach ( UM()->member_directory()->view_types as $key => $value ) {
 										if ( in_array( $key, $args['view_types'] ) ) {
 											if ( empty( $view_types ) ) { ?>
@@ -270,8 +273,9 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 											data-default="<?php echo ( $default_view == $key ) ? 1 : 0; ?>"
 											title="<?php printf( esc_attr__( 'Change to %s', 'ultimate-member' ), $value['title'] ) ?>"
 											default-title="<?php echo esc_attr( $value['title'] ); ?>"
-											next-item="" ><i class="<?php echo $value['icon']; ?>"></i></a>
-										<?php }
+											next-item="" style="<?php echo $display_status;?>"><i class="<?php echo $value['icon']; ?>"></i></a>
+										<?php $display_status = 'display:none;';
+										}
 									}
 
 									if ( ! empty( $view_types ) ) { ?>
@@ -284,7 +288,7 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 										<span><?php _e( 'Sort by:', 'ultimate-member' ); ?>&nbsp;</span>
 										<div class="um-member-directory-sorting-a">
 											<a href="javascript:void(0);" class="um-member-directory-sorting-a-text"><?php echo $sorting_options[ $sort_from_url ] ?></a>
-											&nbsp;<i class="um-faicon-caret-down"></i><i class="um-faicon-caret-up"></i>
+											<!-- &nbsp;<i class="um-faicon-caret-down"></i><i class="um-faicon-caret-up"></i> -->
 										</div>
 									</div>
 
@@ -299,14 +303,16 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 								<?php }
 
 								if ( $filters && $show_filters && count( $search_filters ) && $filters_collapsible ) { ?>
-									<span class="um-member-directory-filters">
-										<span class="um-member-directory-filters-a<?php if ( $filters_expanded ) { ?> um-member-directory-filters-visible<?php } ?>">
-											<a href="javascript:void(0);">
-												<?php _e( 'More filters', 'ultimate-member' ); ?>
-											</a>
-											&nbsp;<i class="um-faicon-caret-down"></i><i class="um-faicon-caret-up"></i>
+									<div style="width:100%;padding-bottom:10px;display:block;">
+										<span class="um-member-directory-filters">
+											<span class="um-member-directory-filters-a<?php if ( $filters_expanded ) { ?> um-member-directory-filters-visible<?php } ?>">
+												<a href="javascript:void(0);">
+													<?php _e( 'More filters', 'ultimate-member' ); ?>
+												</a>
+												<!-- &nbsp;<i class="um-faicon-caret-down"></i><i class="um-faicon-caret-up"></i> -->
+											</span>
 										</span>
-									</span>
+									</div>
 								<?php } ?>
 							</div>
 						</div>
@@ -344,7 +350,7 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 
 										$type = UM()->member_directory()->filter_types[ $filter ]; ?>
 										
-										<div class="um-member-directory-header-row" style="padding-bottom:5px;width:100%;">
+										<div <?php //class="um-member-directory-header-row"?> style="width:100%;padding-bottom:10px;display:block;">
 											<div class="um-search-filter um-<?php echo esc_attr( $type ) ?>-filter-type <?php //echo ( $i != 0 && $i%2 !== 0 ) ? 'um-search-filter-2' : '' ?>">
 												<?php echo $filter_content; ?>
 											</div>
@@ -370,7 +376,7 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 
 			</div> <!--  End cell left -->
 
-			<div style="display:table-cell;width:90%;"> <!--  Cell right -->
+			<div style="display:table-cell;width:85%;"> <!--  Cell right -->
 						
 				<div class="um-member-directory-header"> <!--  New header -->
 				
