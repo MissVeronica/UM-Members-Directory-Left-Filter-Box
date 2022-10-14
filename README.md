@@ -11,3 +11,18 @@ https://docs.ultimatemember.com/article/1516-templates-map
 
 ## Updates ##
 Version 2.0  Date 2022-10-11 Now support for full screen pages
+
+Version 2.1 Date 2022-10-14 Add this CSS to your theme's "Additional CSS"
+
+```
+.um-search-filter select { 
+	padding-bottom:10px !important;
+	display:inline-block !important; 
+	width:100% !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+}
+```
+
+
