@@ -24,5 +24,6 @@ Version 2.1 Date 2022-10-14 Add this CSS to your theme's "Additional CSS" for be
 	box-sizing: border-box !important;
 }
 ```
+Version 2.2  Date 2022-12-14  Updated security from the UM 2.5.2 release
 
 
