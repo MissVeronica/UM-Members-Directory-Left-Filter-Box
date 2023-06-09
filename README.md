@@ -26,4 +26,6 @@ Version 2.1 Date 2022-10-14 Add this CSS to your theme's "Additional CSS" for be
 ```
 Version 2.2  Date 2022-12-14  Updated security from the UM 2.5.2 release ( in line 57 )
 
+Version 2.3 Date 2023-06-09 Updated to UM Version 2.6.1
+
 
