@@ -1,10 +1,19 @@
 <?php
-
+/**
+ * Template for the members directory
+ *
+ * This template can be overridden by copying it to yourtheme/ultimate-member/members.php
+ *
+ * Page: "Members"
+ *
+ * @version 2.6.1
+ *
+ * @var array $args
+ */
 // Customized members.php 
 // Single column filters to the left
-// Version 2.2
-// Updated UM 2.5.2 2022-12-14
-// Date 2022-10-14
+// Version 2.3
+// Updated to UM 2.6.1 2023-06-09
 // https://github.com/MissVeronica/UM-Members-Directory-Left-Filter-Box
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -217,10 +226,12 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 			}
 		}
 	}
-} ?>
+} 
+$postid = ! empty( $post->ID ) ? $post->ID : '';
+?>
 
 <div class="um <?php echo esc_attr( $this->get_class( $mode ) ); ?> um-<?php echo esc_attr( substr( md5( $form_id ), 10, 5 ) ); ?>"
-					data-hash="<?php echo esc_attr( substr( md5( $form_id ), 10, 5 ) ) ?>" data-base-post="<?php echo esc_attr( $post->ID ) ?>"
+					data-hash="<?php echo esc_attr( substr( md5( $form_id ), 10, 5 ) ) ?>" data-base-post="<?php echo esc_attr( $postid ) ?>"
 					data-must-search="<?php echo esc_attr( $must_search ); ?>" data-searched="<?php echo $not_searched ? '0' : '1'; ?>"
 					data-view_type="<?php echo esc_attr( $current_view ) ?>" data-page="<?php echo esc_attr( $current_page ) ?>"
 					data-sorting="<?php echo esc_attr( $sort_from_url ) ?>">
@@ -230,7 +241,7 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 	<div style="display:table;width:100%"> <!--  Table  -->
 
 		<div style="display:table-row;width:100%;"> <!--  Row -->
-							
+
 			<div style="display:table-cell;width:15%;padding-right:10px;vertical-align:top;"> <!--  Cell left -->
 
 				<div class="um-form"> <!--  Header cell left -->
@@ -350,7 +361,7 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 										}
 
 										$type = UM()->member_directory()->filter_types[ $filter ]; ?>
-										
+
 										<div <?php //class="um-member-directory-header-row"?> style="width:100%;padding-bottom:10px;display:block;">
 											<div class="um-search-filter um-<?php echo esc_attr( $type ) ?>-filter-type <?php //echo ( $i != 0 && $i%2 !== 0 ) ? 'um-search-filter-2' : '' ?>">
 												<?php echo $filter_content; ?>
@@ -372,15 +383,15 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 						<?php
 						}
 					} ?>
-				
+
 				</div> <!--  End header cell left -->
 
 			</div> <!--  End cell left -->
 
 			<div style="display:table-cell;width:85%;"> <!--  Cell right -->
-						
+
 				<div class="um-member-directory-header"> <!--  New header -->
-				
+
 					<?php
 					do_action( 'um_members_directory_head', $args ); ?>				
 
@@ -415,3 +426,4 @@ if ( ( ( $search && $show_search ) || ( $filters && $show_filters && count( $sea
 		</div>  <!-- End row -->
 	</div>  <!-- End table -->
 </div>
+
