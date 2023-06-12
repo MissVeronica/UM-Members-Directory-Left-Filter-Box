@@ -6,14 +6,14 @@
  *
  * Page: "Members"
  *
- * @version 2.6.1
+ * @version 2.6.3
  *
  * @var array $args
  */
 // Customized members.php 
 // Single column filters to the left
-// Version 2.3
-// Updated to UM 2.6.1 2023-06-09
+// Version 2.4
+// Updated to UM 2.6.3 2023-06-12
 // https://github.com/MissVeronica/UM-Members-Directory-Left-Filter-Box
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -141,6 +141,14 @@ if ( ! empty( $search_filters ) ) {
 	});
 
 	$search_filters = array_values( $search_filters );
+}
+
+// Hide filter fields based on the field visibility.
+foreach ( $search_filters as $key => $filter ) {
+	$filter_data = UM()->fields()->get_field( $filter );
+	if ( ! um_can_view_field( $filter_data ) ) {
+		unset( $search_filters[ $key ] );
+	}
 }
 
 // Classes
