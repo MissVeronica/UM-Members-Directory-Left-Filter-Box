@@ -284,7 +284,7 @@ $postid = ! empty( $post->ID ) ? $post->ID : '';
 									$display_status = '';
 									
 									foreach ( UM()->member_directory()->view_types as $key => $value ) {
-										if ( in_array( $key, $args['view_types'] ), true ) {
+										if ( in_array( $key, $args['view_types'], true ) ) {
 											if ( empty( $view_types ) ) { 
 												?>
 												<span class="um-member-directory-view-type<?php if ( $not_searched ) {?> um-disabled<?php } ?>">
