@@ -12,7 +12,7 @@
  */
 // Customized members.php 
 // Single column filters to the left
-// Version 2.4
+// Version 2.5
 // Updated to UM 2.6.3 2023-06-12
 // Updated to UM 2.6.8 2023-09-06 UM made only PHP formatting diffs
 // https://github.com/MissVeronica/UM-Members-Directory-Left-Filter-Box
