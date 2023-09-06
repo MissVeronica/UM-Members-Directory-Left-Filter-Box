@@ -6,7 +6,7 @@
  *
  * Page: "Members"
  *
- * @version 2.6.3
+ * @version 2.6.8
  *
  * @var array $args
  */
@@ -14,6 +14,7 @@
 // Single column filters to the left
 // Version 2.4
 // Updated to UM 2.6.3 2023-06-12
+// Updated to UM 2.6.8 2023-09-06 UM made only PHP formatting diffs
 // https://github.com/MissVeronica/UM-Members-Directory-Left-Filter-Box
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -239,12 +240,12 @@ $postid = ! empty( $post->ID ) ? $post->ID : '';
 ?>
 
 <div class="um <?php echo esc_attr( $this->get_class( $mode ) ); ?> um-<?php echo esc_attr( substr( md5( $form_id ), 10, 5 ) ); ?>"
-					data-hash="<?php echo esc_attr( substr( md5( $form_id ), 10, 5 ) ) ?>" data-base-post="<?php echo esc_attr( $postid ) ?>"
-					data-must-search="<?php echo esc_attr( $must_search ); ?>" data-searched="<?php echo $not_searched ? '0' : '1'; ?>"
-					data-view_type="<?php echo esc_attr( $current_view ) ?>" data-page="<?php echo esc_attr( $current_page ) ?>"
-					data-sorting="<?php echo esc_attr( $sort_from_url ) ?>">
+	 data-hash="<?php echo esc_attr( substr( md5( $form_id ), 10, 5 ) ) ?>" data-base-post="<?php echo esc_attr( $postid ) ?>"
+	 data-must-search="<?php echo esc_attr( $must_search ); ?>" data-searched="<?php echo $not_searched ? '0' : '1'; ?>"
+	 data-view_type="<?php echo esc_attr( $current_view ) ?>" data-page="<?php echo esc_attr( $current_page ) ?>"
+	 data-sorting="<?php echo esc_attr( $sort_from_url ) ?>">
 
-			<div class="um-members-overlay"><div class="um-ajax-loading"></div></div>
+     <div class="um-members-overlay"><div class="um-ajax-loading"></div></div>
 
 	<div style="display:table;width:100%"> <!--  Table  -->
 
@@ -268,22 +269,27 @@ $postid = ! empty( $post->ID ) ? $post->ID : '';
 								</div>
 							</div>
 						</div>
-					<?php }
+					<?php 
+					}
 
 					if ( ( ! empty( $args['enable_sorting'] ) && ! empty( $sorting_options ) && count( $sorting_options ) > 1 ) ||
 						( $filters && $show_filters && count( $search_filters ) ) ||
-						! $single_view ) { ?>
+						! $single_view ) { 
+						?>
 						<div class="um-member-directory-header-row">
 							<div class="um-member-directory-nav-line">
-								<?php if ( ! $single_view ) {
+								<?php 
+								if ( ! $single_view ) {
 									$view_types = 0;
 									$display_status = '';
 									
 									foreach ( UM()->member_directory()->view_types as $key => $value ) {
-										if ( in_array( $key, $args['view_types'] ) ) {
-											if ( empty( $view_types ) ) { ?>
+										if ( in_array( $key, $args['view_types'] ), true ) {
+											if ( empty( $view_types ) ) { 
+												?>
 												<span class="um-member-directory-view-type<?php if ( $not_searched ) {?> um-disabled<?php } ?>">
-											<?php }
+											<?php 
+											}
 
 											$view_types++; ?>
 
@@ -298,9 +304,11 @@ $postid = ! empty( $post->ID ) ? $post->ID : '';
 										}
 									}
 
-									if ( ! empty( $view_types ) ) { ?>
+									if ( ! empty( $view_types ) ) { 
+										?>
 										</span>
-									<?php }
+									<?php 
+									}
 								}
 
 								if ( ! empty( $args['enable_sorting'] ) && ! empty( $sorting_options ) && count( $sorting_options ) > 1 ) { ?>
@@ -352,8 +360,8 @@ $postid = ! empty( $post->ID ) ? $post->ID : '';
 												<strong>{{{filter.label}}}</strong>: {{{filter.value_label}}}
 											<# } #>
 											<div class="um-members-filter-remove um-tip-n" data-name="{{{filter.name}}}"
-												data-value="{{{filter.value}}}" data-range="{{{filter.range}}}"
-												data-type="{{{filter.type}}}" title="<?php esc_attr_e( 'Remove filter', 'ultimate-member' ) ?>">&times;</div>
+											 data-value="{{{filter.value}}}" data-range="{{{filter.range}}}"
+											 data-type="{{{filter.type}}}" title="<?php esc_attr_e( 'Remove filter', 'ultimate-member' ) ?>">&times;</div>
 										</div>
 									<# }); #>
 								<# } #>
@@ -434,4 +442,3 @@ $postid = ! empty( $post->ID ) ? $post->ID : '';
 		</div>  <!-- End row -->
 	</div>  <!-- End table -->
 </div>
-
