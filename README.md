@@ -30,4 +30,6 @@ Version 2.3 Date 2023-06-09 Updated to UM Version 2.6.1
 
 Version 2.4 Date 2023-06-12 Updated to UM Version 2.6.3
 
+Version 2.5 Date 2023-09-06 Updated to UM Version 2.6.8
+
 
