@@ -32,4 +32,10 @@ Version 2.4 Date 2023-06-12 Updated to UM Version 2.6.3
 
 Version 2.5 Date 2023-09-06 Updated to UM Version 2.6.8
 
+Version 3.0 Date 2024-09-20 How to use "Left side template" for Screens and default UM template for Tablets and Mobiles.
+1. Rename your current Custom template from members.php to members-screen.php
+2. Create a new members.php file in your active theme’s template folder.
+3. Download and save this code-snippet.php into this new template file.
+
+
 
