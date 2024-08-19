@@ -23,6 +23,9 @@ Version 2.1 Date 2022-10-14 Add this CSS to your Theme's appearance setting and 
     -webkit-box-sizing: border-box !important;
 	box-sizing: border-box !important;
 }
+.um-search-filter.um-select-filter-type .select2 {
+    width: 100% !important;
+}
 ```
 Version 2.2  Date 2022-12-14  Updated security from the UM 2.5.2 release ( in line 57 )
 
