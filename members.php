@@ -251,20 +251,20 @@ $postid = ! empty( $post->ID ) ? $post->ID : '';
 
 		<div style="display:table-row;width:100%;"> <!--  Row -->
 
-			<div style="display:table-cell;width:15%;padding-right:10px;vertical-align:top;"> <!--  Cell left -->
+			<div style="display:table-cell;width:25%;padding-right:10px;vertical-align:top;"> <!--  Cell left -->
 
-				<div class="um-form"> <!--  Header cell left -->
+				<div class="um-form" style="padding: 10px;"> <!--  Header cell left -->
 
 					<?php do_action( 'um_members_directory_before_head', $args, $form_id, $not_searched ); ?>
 
 					<?php if ( $search && $show_search ) { ?>
 						<div class="um-member-directory-header-row um-member-directory-search-row">
 							<div class="um-member-directory-search-line">
-								<label>
+								<label style="width: 100%;">
 									<span><?php _e( 'Search:', 'ultimate-member' ); ?></span>
 									<input type="search" class="um-search-line" placeholder="<?php esc_attr_e( 'Search', 'ultimate-member' ) ?>"  value="<?php echo esc_attr( $search_from_url ) ?>" aria-label="<?php esc_attr_e( 'Search', 'ultimate-member' ) ?>" speech />
 								</label>
-								<div style="padding-top:10px;">
+								<div style="padding-top:10px; padding-bottom:10px;">
 									<input type="button" class="um-do-search um-button" value="<?php esc_attr_e( 'Search', 'ultimate-member' ); ?>" />
 								</div>
 							</div>
@@ -404,7 +404,7 @@ $postid = ! empty( $post->ID ) ? $post->ID : '';
 
 			</div> <!--  End cell left -->
 
-			<div style="display:table-cell;width:85%;"> <!--  Cell right -->
+			<div style="display:table-cell;width:75%;"> <!--  Cell right -->
 
 				<div class="um-member-directory-header"> <!--  New header -->
 
