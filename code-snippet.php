@@ -15,11 +15,12 @@
 // Default UM template for Tablets and Mobiles
 // Version 3.0
 // Tested with UM 2.8.3 2024-02-19
+// Updated for UM 2.9.2 2025-01-14
 // https://github.com/MissVeronica/UM-Members-Directory-Left-Filter-Box
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 if ( ! class_exists( 'UM' ) ) return;
-if ( UM()->mobile()->isMobile() || UM()->mobile()->isTablet()) {
+if ( wp_is_mobile() ) {
     $located = UM_PATH . 'templates' . DIRECTORY_SEPARATOR . 'members.php';
 } else {
     $located = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'members-screen.php';    
