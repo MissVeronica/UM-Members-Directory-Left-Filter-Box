@@ -48,5 +48,7 @@ Update 2024-08-20 Addition of members-25.php with left column 25% of screen widt
     width: 100% !important;
 }</code>
 
+Update 2025-01-14: code-snippet.php mobile/tablet support for UM 2.9.2
+
 
 
