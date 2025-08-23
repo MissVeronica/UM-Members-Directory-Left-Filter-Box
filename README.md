@@ -10,9 +10,8 @@ https://docs.ultimatemember.com/article/1516-templates-map
 
 
 ## Updates ##
-Version 2.0  Date 2022-10-11 Now support for full screen pages
-
-Version 2.1 Date 2022-10-14 Add this CSS to your Theme's appearance setting and "Additional CSS" for better alignment in left column.
+* Version 2.0  Date 2022-10-11 Now support for full screen pages
+* Version 2.1 Date 2022-10-14 Add this CSS to your Theme's appearance setting and "Additional CSS" for better alignment in left column.
 
 ```
 .um-search-filter select { 
@@ -27,15 +26,13 @@ Version 2.1 Date 2022-10-14 Add this CSS to your Theme's appearance setting and 
     width: 100% !important;
 }
 ```
-Version 2.2  Date 2022-12-14  Updated security from the UM 2.5.2 release ( in line 57 )
+* Version 2.2  Date 2022-12-14  Updated security from the UM 2.5.2 release ( in line 57 )
+* Version 2.3 Date 2023-06-09 Updated to UM Version 2.6.1
+* Version 2.4 Date 2023-06-12 Updated to UM Version 2.6.3
+* Version 2.5 Date 2023-09-06 Updated to UM Version 2.6.8
 
-Version 2.3 Date 2023-06-09 Updated to UM Version 2.6.1
-
-Version 2.4 Date 2023-06-12 Updated to UM Version 2.6.3
-
-Version 2.5 Date 2023-09-06 Updated to UM Version 2.6.8
-
-Version 3.0 Date 2024-02-20 How to use "Left side template" for Screens and default UM template for Tablets and Mobiles.
+* Version 3.0 
+* Date 2024-02-20 How to use "Left side template" for Screens and default UM template for Tablets and Mobiles.
 1. Rename your current Custom template from members.php to members-screen.php
 2. Create a new members.php file in your active theme’s template folder.
 3. Download and save this code-snippet.php into this new template file.
@@ -48,7 +45,10 @@ Update 2024-08-20 Addition of members-25.php with left column 25% of screen widt
     width: 100% !important;
 }</code>
 
-Update 2025-01-14: code-snippet.php mobile/tablet support for UM 2.9.2
+* 2025-01-14: code-snippet.php mobile/tablet support for UM 2.9.2
+
+* Version 4.0
+* 2025-08-23 Update with log function to find new mobile User agents if WP_DEBUG is set to true output to .../wp-content/um_browser_detection_log.html
 
 
 
