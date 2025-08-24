@@ -9,8 +9,8 @@ Download from this repository and upload to your ```/ultimate-member/templates/`
 https://docs.ultimatemember.com/article/1516-templates-map
 
 ## Notices ##
-* Neither server/CDN nor plugin caching are supported with this mobile template solution.
-* Mobile browsers with changed setting to use "Desktop view" are not supported.
+* Server/CDN or plugin caching are supported with this mobile template solution.
+* Mobile browsers with changed setting to use "Desktop view" are not supported if not site site is possible to be excluded by the User.
 ## Updates ##
 * Version 2.0  Date 2022-10-11 Now support for full screen pages
 * Version 2.1 Date 2022-10-14 Add this CSS to your Theme's appearance setting and "Additional CSS" for better alignment in left column.
