@@ -51,6 +51,8 @@ Update 2024-08-20 Addition of members-25.php with left column 25% of screen widt
 
 * Version 4.0
 * 2025-08-23 Update with log function to find new mobile User agents if WP_DEBUG is set to true output to .../wp-content/um_browser_detection_log.html
+* Version 4.1
+* 2025-09-03 Prio 99999, increased log entries, links to "useragents.io" via google
 
 
 
